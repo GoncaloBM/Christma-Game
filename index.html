@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="memorygame.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div id="question-screen">
+      <div id="title-screen">Jogo do Natal</div>
+      <img id="boneco-neve" src="Snowman-Download-PNG.png">
+      <img id="arvore-natal" src="christmas-tree-png-22.png">
+
+      <!-- Pergunta1 -->
+      <div class="perguntas" id="pergunta1">
+        <div class="title-question">Resposta da Carlota</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer1"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit1">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="perguntas" id="pergunta2">
+        <div class="title-question">Resposta do Manuel</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer2"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit2">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 3  -->
+      <div class="perguntas" id="pergunta3">
+        <div class="title-question">Resposta do Américo</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer3"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit3">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 4 -->
+      <div class="perguntas" id="pergunta4">
+        <div class="title-question">Resposta do Diogo</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer4"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit4">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 5 -->
+      <div class="perguntas" id="pergunta5">
+        <div class="title-question">Resposta da Fátima</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer5"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit5">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 6 -->
+      <div class="perguntas" id="pergunta6">
+        <div class="title-question">Resposta da Paula</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer6"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit6">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 7  -->
+      <div class="perguntas" id="pergunta7">
+        <div class="title-question">Resposta do António</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer7"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit7">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <!-- Pergunta 8  -->
+      <div class="perguntas" id="pergunta8">
+        <div class="title-question">Resposta do Leandro</div>
+        <div class="answer-set">
+          <textarea
+            class="answer"
+            id="answer8"
+            style="height: 100%;"
+            placeholder="A tua resposta..."
+          ></textarea>
+          <div class="submit-answer" id="submit8">></div>
+        </div>
+        <div class="rightorworong"></div>
+      </div>
+
+      <p id="start-game-button">Começar Jogo</p>
+    </div>
+
+    <div class="win-win">
+      <p id="win-title">Parabéns! Ganharam!</p>
+      <div id="sub-win-title">Cliquem no presente para receber a prenda.</div>
+      <img id='prenda' src="http://hamptonwellnesscentre.com/wp-content/uploads/2015/12/Christmas-Gift-PNG-01469.png">
+      <div class="perguntas-finais">
+        <div id="perguntafinal">Querem mesmo?</div>
+        <div class="escolhas">
+          <div class="sim-nao" id="sim">Sim</div>
+          <div class="sim-nao" id="nao">Não</div>
+        </div>
+      </div>
+      <div id="winimage-1"></div>
+      <div id="winimage-2"></div>
+    </div>
+
+    <div class="container-fluid wrapper">
+      <div id="title">Jogo de Natal</div>
+      <div class="playboard">
+        <div class="row">
+          <div class="col c2x2 hidden">1</div>
+          <div class="col c2x2 hidden">4</div>
+          <div class="col c4x4 hidden">6</div>
+          <div class="col c4x4 hidden">6</div>
+        </div>
+        <div class="row">
+          <div class="col c2x2 hidden">2</div>
+          <div class="col c2x2 hidden">5</div>
+          <div class="col c4x4 hidden">1</div>
+          <div class="col c4x4 hidden">4</div>
+        </div>
+        <div class="row">
+          <div class="col c4x4 hidden">3</div>
+          <div class="col c4x4 hidden">7</div>
+          <div class="col c4x4 hidden">8</div>
+          <div class="col c4x4 hidden">7</div>
+        </div>
+        <div class="row">
+          <div class="col c4x4 hidden">5</div>
+          <div class="col c4x4 hidden">3</div>
+          <div class="col c4x4 hidden">8</div>
+          <div class="col c4x4 hidden">2</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const botao = $(".col");
+      let select = 0;
+      let data = [];
+      let number = 0;
+      const startGame = $("#start-game-button");
+      const startDisplay = $(".start-game");
+      const gameDisplay = $(".wrapper");
+      const easyChoice = $("#easy-choice");
+      const normalChoice = $("#normal-choice");
+      const hardChoice = $("#hard-choice");
+      let easy = false;
+      let normal = false;
+      let hard = false;
+      let remainingPlays = 0;
+      let difficultTitle = $("#difficult");
+      let remainingTitle = $("#remaining-plays");
+      const reset = $(".reset");
+      const gameOverDisplay = $(".game-over");
+      const winDisplay = $(".win-win");
+      let playWin = 0;
+      let playboard = $(".playboard");
+      let arrayOfNumbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+      const pergunta1 = $("#pergunta1");
+      const answer1 = $("#answer1");
+      const submit1 = $("#submit1");
+      const pergunta2 = $("#pergunta2");
+      const answer2 = $("#answer2");
+      const submit2 = $("#submit2");
+      const pergunta3 = $("#pergunta3");
+      const answer3 = $("#answer3");
+      const submit3 = $("#submit3");
+      const pergunta4 = $("#pergunta4");
+      const answer4 = $("#answer4");
+      const submit4 = $("#submit4");
+      const pergunta5 = $("#pergunta5");
+      const answer5 = $("#answer5");
+      const submit5 = $("#submit5");
+      const pergunta6 = $("#pergunta6");
+      const answer6 = $("#answer6");
+      const submit6 = $("#submit6");
+      const pergunta7 = $("#pergunta7");
+      const answer7 = $("#answer7");
+      const submit7 = $("#submit7");
+      const pergunta8 = $("#pergunta8");
+      const answer8 = $("#answer8");
+      const submit8 = $("#submit8");
+      const rightOrWrong = $('.rightorworong');
+      const questionScreen = $('#question-screen');
+      const winImage1 = $('#winimage-1');
+      const winImage2 = $('#winimage-2');
+      const winTitle = $('#win-title');
+      const subWinTitle = $('#sub-win-title');
+      const prenda = $('#prenda');
+      let perguntaFinal = 0;
+      const escolhaSim = $('#sim');
+      const escolhaNão = $('.sim-nao')[1];
+      const tituloFinal = $('#perguntafinal');
+      const perguntasFinais = $('.perguntas-finais');
+
+      submit1.click(function() {
+        if (answer1.val() === "Dedal") {
+          pergunta1.css("display", "none");
+          rightOrWrong.text('');
+          pergunta2.css('opacity','1');
+          pergunta2.css('transform','translateY(30%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit2.click(function() {
+        if (answer2.val() === "Passat") {
+          pergunta2.css("display", "none");
+          rightOrWrong.text('');
+          pergunta3.css('opacity','1');
+          pergunta3.css('transform','translateY(60%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit3.click(function() {
+        if (answer3.val() === "Passat") {
+          pergunta3.css("display", "none");
+          rightOrWrong.text('');
+          pergunta4.css('opacity','1');
+          pergunta4.css('transform','translateY(90%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit4.click(function() {
+        if (answer4.val() === "Passat") {
+          pergunta4.css("display", "none");
+          rightOrWrong.text('');
+          pergunta5.css('opacity','1');
+          pergunta5.css('transform','translateY(120%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit5.click(function() {
+        if (answer5.val() === "Passat") {
+          pergunta5.css("display", "none");
+          rightOrWrong.text('');
+          pergunta6.css('opacity','1');
+          pergunta6.css('transform','translateY(150%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit6.click(function() {
+        if (answer6.val() === "Passat") {
+          pergunta6.css("display", "none");
+          rightOrWrong.text('');
+          pergunta7.css('opacity','1');
+          pergunta7.css('transform','translateY(180%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit7.click(function() {
+        if (answer7.val() === "Passat") {
+          pergunta7.css("display", "none");
+          rightOrWrong.text('');
+          pergunta8.css('opacity','1');
+          pergunta8.css('transform','translateY(210%)');
+        } else {
+          rightOrWrong.text('Pensa um pouco melhor :)');
+        }
+      });
+
+      submit8.click(function() {
+        if (answer8.val() === "Passat") {
+          pergunta8.css("display", "none");
+          startGame.css('display','block')
+        } else {
+          rightOrWrong.text('Errado');
+        }
+      });
+
+      function shuffleArray(arrayOfNumbers) {
+        for (let a = arrayOfNumbers.length - 1; a > 0; a--) {
+          let b = Math.floor(Math.random() * (a + 1));
+          [arrayOfNumbers[a], arrayOfNumbers[b]] = [
+            arrayOfNumbers[b],
+            arrayOfNumbers[a]
+          ];
+        }
+      }
+
+      function shuffleCards() {
+        for (let c = 0; c < botao.length; c++) {
+          botao.eq(c).text(`${arrayOfNumbers[c]}`);
+        }
+      }
+
+      function selectCard() {
+        botao.click(function() {
+          if ($(this).hasClass('active')){
+            alert('Escolham outra, não sejam batoteiros!');
+          } else {
+            $(this).addClass("shown");
+            $(this).addClass('active');
+          if ($(this).text() === '1') {
+            $(this).addClass('shown1');
+          } else if ($(this).text() === '2') {
+            $(this).addClass('shown2');
+          } else if ($(this).text() === '3') {
+            $(this).addClass('shown3');
+          } else if ($(this).text() === '4') {
+            $(this).addClass('shown4');
+          } else if ($(this).text() === '5') {
+            $(this).addClass('shown5');
+          } else if ($(this).text() === '6') {
+            $(this).addClass('shown6');
+          } else if ($(this).text() === '7') {
+            $(this).addClass('shown7');
+          } else if ($(this).text() === '8') {
+            $(this).addClass('shown8');
+          }
+          select++;
+          data.push($(this).text());
+          console.log(data);
+          console.log(select);
+          }
+          if (select === 2) {
+            botao.css("pointer-events", "none");
+            setTimeout(turnHidden, 1000);
+            remainingPlays--;
+            remainingTitle.html(`Remaining Plays: ${remainingPlays}`);
+            console.log(`Remaining Plays: ${remainingPlays}`);
+            console.log(`Plays to Win: ${playWin}`);
+            gameOver();
+          }
+        });
+      }
+
+      function turnHidden() {
+        botao.css("pointer-events", "");
+        if (select === 2) {
+          if (data[0] === data[1]) {
+            playWin++;
+            select = 0;
+            data = [];
+            turnWinner();
+          } else {
+            botao.removeClass("shown");
+            botao.removeClass('shown1');
+            botao.removeClass('shown2');
+            botao.removeClass('shown3');
+            botao.removeClass('shown4');
+            botao.removeClass('shown5');
+            botao.removeClass('shown6');
+            botao.removeClass('shown7');
+            botao.removeClass('shown8');
+            botao.removeClass('active');
+            select = 0;
+            data = [];
+          }
+        }
+      }
+
+      selectCard();
+
+      function turnWinner() {
+        botao.each(function() {
+          if ($(this).hasClass("shown")) {
+            $(this).addClass("winner");
+          }
+          win();
+        });
+      }
+
+      startGame.click(function() {
+        questionScreen.css("display", "none");
+        gameDisplay.css("display", "flex");
+        botao.removeClass("shown");
+        botao.removeClass("winner");
+        shuffleArray(arrayOfNumbers);
+        shuffleCards();
+        // if (easy === true && normal === false && hard === false) {
+        //   remainingPlays = 30;
+        //   difficultTitle.html("Easy");
+        //   remainingTitle.html(`Remaining Plays: ${remainingPlays}`);
+        // } else if ((easy = false && normal === true && hard === false)) {
+        //   remainingPlays = 15;
+        //   difficultTitle.html("Normal");
+        //   remainingTitle.html(`Remaining Plays: ${remainingPlays}`);
+        // } else if (easy === false && normal === false && hard === true) {
+        //   remainingPlays = 9;
+        //   difficultTitle.html("Hard");
+        //   remainingTitle.html(`Remaining Plays: ${remainingPlays}`);
+        // }
+        console.log(remainingPlays);
+      });
+
+      //   function gameOver() {
+      //     if (remainingPlays === 0) {
+      //       gameDisplay.css("display", "none");
+      //     }
+      //   }
+      function winImage2Appear () {
+        winImage1.css('display','none');
+        winImage2.css('display','block');
+      }
+
+      function winImage1Appear () {
+        winImage2.css('display','none');
+        winImage1.css('display','block');
+      }
+
+      function win() {
+        if (playWin === 8) {
+          winDisplay.css("display", "flex");
+          gameDisplay.css("display", "none");
+        }
+      }
+
+      escolhaSim.click(function () {
+        perguntaFinal++;
+        console.log(perguntaFinal);
+        ecraFinal();
+      })
+
+      function ecraFinal (){
+        if (perguntaFinal === 1) {
+          tituloFinal.html('De certeza?');
+        } else if (perguntaFinal === 2 ) {
+          tituloFinal.html('Quando abrirem, já não há volta a dar...');
+        } else if (perguntaFinal === 3 ) {
+          tituloFinal.html('Último aviso, querem mesmo?');
+        } else if (perguntaFinal === 4 ) {
+          tituloFinal.html('Que grandes malucos, vamos lá abrir?');
+        } else if (perguntaFinal === 5) {
+          winTitle.html('PARABÉNS');
+          perguntasFinais.css('display','none');
+          winImage1.css('display','block');
+          setTimeout(winImage2Appear, 5000);
+          setTimeout(winImage1Appear, 10000);
+        }
+      }
+
+      prenda.click(function(){
+        prenda.css('display','none');
+        subWinTitle.css('display','none');
+        perguntasFinais.css('display','flex');
+      })
+
+
+    </script>
+  </body>
+</html>

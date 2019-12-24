@@ -1,0 +1,366 @@
+#question-screen {
+  background-color: #e83600;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  display: none;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+#title-screen {
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 7rem;
+  color: white;
+}
+
+#boneco-neve {
+  position: absolute;
+  left: 0%;
+  max-width: 30%;
+  bottom: 0%;
+}
+
+#arvore-natal {
+  position: absolute;
+  right: 0%;
+  max-width: 30%;
+  bottom: 0%;
+}
+.perguntas {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+  border: 1px solid black;
+  height: 25%;
+  width: 30%;
+  position: absolute;
+  left: 35%;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.title-question {
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.answer-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  height: 60%;
+  width: 80%;
+}
+
+.answer {
+  width: 70%;
+  line-height: 6.5rem;
+  margin-right: 5%;
+  border-radius: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.submit-answer {
+  padding: 5px;
+  border: black solid 0.5px;
+  text-align: center;
+  border-radius: 1px;
+  box-shadow: 0 10px 6px -6px #777;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.submit-answer:hover {
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.rightorworong {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+#pergunta1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#pergunta2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#pergunta3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#pergunta4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#pergunta5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#pergunta6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#pergunta7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#pergunta8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+#start-game-button {
+  display: none;
+  position: absolute;
+  font-size: 5rem;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  left: 30%;
+  bottom: 40%;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 5px;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+#start-game-button:hover {
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.wrapper {
+  display: none;
+  background-color: #e83600;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.playboard {
+  width: 80%;
+}
+
+.col {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  color: transparent;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.hidden {
+  background-image: url(91ce91140ae616197d353883a8be7eaa.jpg);
+  background-size: cover;
+}
+
+.shown1 {
+  background-image: url(Snowman-Download-PNG.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown2 {
+  background-image: url(christmas-tree-png-22.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown3 {
+  background-image: url(https://cdn.pling.com/img/c/c/5/d/75abbaa03e01e43f70041678cc7f73d35d86.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown4 {
+  background-image: url(https://images.vexels.com/media/users/3/133859/isolated/preview/cac43ac07e6e0f4ad485d061ff8f1a7c-desenhos-animados-da-cabe--a-de-rudolph-by-vexels.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown5 {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/IS_Christmas/512/cookie.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown6 {
+  background-image: url(https://www.freeiconspng.com/uploads/golden-christmas-star-png-20.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown7 {
+  background-image: url(http://pngimg.com/uploads/bell/bell_PNG53529.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shown8 {
+  background-image: url(http://hamptonwellnesscentre.com/wp-content/uploads/2015/12/Christmas-Gift-PNG-01469.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.winner {
+  color: white;
+  opacity: 0;
+}
+
+#title {
+  margin-top: 0;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 7rem;
+  color: white;
+}
+
+.win-win {
+  display: none;
+  background-color: #e83600;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+#win-title {
+  display: block;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 7rem;
+  height: 20%;
+  color: white;
+}
+
+#sub-win-title {
+  display: block;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 3rem;
+  color: white;
+}
+
+#prenda {
+  display: block;
+  cursor: pointer;
+}
+
+.perguntas-finais {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+#perguntafinal {
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 4rem;
+  color: white;
+}
+
+.escolhas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 2rem;
+  color: black;
+}
+
+.sim-nao {
+  cursor: pointer;
+  margin: 20%;
+  padding: 30px;
+  border: 0.5px solid black;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
+}
+
+.sim-nao:hover {
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+#winimage-1 {
+  background-image: url(Imagem1.png);
+  display: none;
+  width: 100%;
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#winimage-2 {
+  background-image: url(Imagem2.png);
+  display: none;
+  width: 100%;
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
